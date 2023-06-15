@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css"></link>  
+</head>
+<body> 
+<div>
+  <h2>Heat Trace Calculator</h2>
+  <table id="entry">
+    <tr>
+      <td>Pipe Footage</td>
+      <td><input type="number" id="pipeFt"></td>  
+    </tr>   
+    <tr>
+      <td>90 Count</td>
+      <td><input type="number" id="ninCnt"></td>
+    </tr>
+    <tr>
+      <td>Tee Count</td>
+      <td><input type="number" id="teeCnt"></td>
+    </tr>
+    <tr>
+      <td>Valve Count</td>
+      <td><input type="number" id="vlvCnt"></td>
+    </tr>
+  </table>
+<br/>
+</div>
+<div>
+  <h2>Variable Cost Table</h2>
+  <table>
+    <tr>
+      <td>Cable Cost Per ft</td>
+      <td><input type="number" value="7.00" id="cblCst"></td>  
+    </tr>    
+    <tr>
+      <td>Thermostat Price</td>
+      <td><input type="number" id="thermCst" value="375"></td>
+    </tr>
+    <tr>
+      <td>Cable Per Thermostat</td>
+      <td><input type="number" id="cblPerTherm" value="250"></td>
+    </tr>
+    <tr>
+      <td>Cable Per Day</td>
+      <td><input type="number" id="cblPerDay" value="150"></td>
+    </tr>
+    <tr>
+      <td>Labor Cost Per Day</td>
+      <td><input type="number" id="lbrPerDay" value="260"></td>  
+    </tr>    
+    <tr>
+      <td>End Seals Per Bag</td>
+      <td><input type="number" id="endSealPerBag" value="5"></td>
+    </tr>
+    <tr>
+      <td>Footage Per Roll of Tape</td>
+      <td><input type="number" id="ftPerRoll" value="50"></td>
+    </tr>
+    <tr>
+      <td>Cost Per Roll of Tape</td>
+      <td><input type="number" id="cstPerTape" value="10"></td>
+    </tr>
+    <tr>
+      <td>Cost Per Strap</td>
+      <td><input type="number" id="cstPerStrap" value="10"></td>
+    </tr>
+    <tr>
+      <td>Cost Per Bag of Tees</td>
+      <td><input type="number" id="cstPerTeeBag" value="30"></td>
+    </tr>
+    <tr>
+      <td>Cost Per End Seal Bag</td>
+      <td><input type="number" id="cstPerEnd" value="25"></td>
+    </tr>
+  </table>
+<br/>
+<br/>
+<br/>
+<button id="btn">Calculate</button>
+</div>
+<div>
+  <p id="result"></p>
+</div>
+<script src="index.js"></script>    
+</body>
+</html>
