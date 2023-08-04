@@ -12,6 +12,8 @@ function calc () {
     let tapeCstPer = parseInt(document.getElementById("cstPerTape").value);
     let cstPerStrap = parseInt(document.getElementById("cstPerStrap").value);
     let cstPerTBag = parseInt(document.getElementById("cstPerTeeBag").value);
+    let cblPerDay  = parseInt(document.getElementById("cblPerDay").value);
+    let lbrPerDay = parseInt(document.getElementById("lbrPerDay").value);
     let fitMth = (ninCnt + teeCnt) * 2 + (vlvCnt * 3) + pipeFt;
     let wasteMath = (fitMth *1.05);
     let cblCst = parseFloat(document.getElementById("cblCst").value) * wasteMath;
@@ -25,7 +27,8 @@ function calc () {
     let tapeCst = tapeNeeded * tapeCstPer
     let strapCst = (amntTherm * 2) * cstPerStrap
     let tBagCst = (teeCnt / 5) * cstPerTBag
-    let finalMath = thermCst + cblCst + endCst + tapeCst + strapCst + tBagCst ;
+    let lbrCst = (wasteMath / cblPerDay) * lbrPerday
+    let finalMath = thermCst + cblCst + endCst + tapeCst + strapCst + tBagCst + lbrCst ;
     let res = document.getElementById("result").innerHTML="Your heat trace cost is: " + "$" + finalMath;   
 }
 
