@@ -17,8 +17,7 @@ function calc () {
     let endCnt = amntTherm + teeCnt;
     let bagCnt = endCnt / endPerBag;
     let endCst = bagCnt * endBagCst;
-    console.log(endCst);
-    let finalMath = thermCst + cblCst;
+    let finalMath = thermCst + cblCst + endCst;
     let res = document.getElementById("result").innerHTML="Your heat trace cost is: " + "$" + finalMath;   
 }
 
