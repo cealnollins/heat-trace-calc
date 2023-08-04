@@ -29,8 +29,7 @@ function calc () {
     let tBagCst = (teeCnt / 5) * cstPerTBag
     let lbrCst = (wasteMath / cblPerDay) * lbrPerDay
     let finalMath = thermCst + cblCst + endCst + tapeCst + strapCst + tBagCst + lbrCst ;
-    let dollarString = new Intl.NumberFormat("en-US", formatting_options)
-    let res = dollarString.format(document.getElementById("result").innerHTML="Your heat trace cost is: " + "$" + Math.ceil(finalMath *1.35));   
+    let res = document.getElementById("result").innerHTML="Your heat trace cost is: " + "$" + Math.ceil(finalMath *1.35);   
 }
 
 btnEl.addEventListener("click", calc)
