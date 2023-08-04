@@ -7,7 +7,7 @@ function calc () {
     let teeCnt = parseInt(document.getElementById("teeCnt").value);
     let vlvCnt = parseInt(document.getElementById("vlvCnt").value);
     let endPerBag = parseInt(document.getElementById("endSealPerBag").value);
-    let endBagCost = parseInt(document.getElementById("cstPerEnd").value);    
+    let endBagCst = parseInt(document.getElementById("cstPerEnd").value);    
     let fitMth = (ninCnt + teeCnt) * 2 + (vlvCnt * 3 + pipeFt);
     let wasteMath = (fitMth *1.05);
     let cblCst = parseFloat(document.getElementById("cblCst").value) * wasteMath;
