@@ -14,7 +14,8 @@ function calc () {
     let thermCst = parseFloat(document.getElementById("thermCst").value) * amntTherm;
     let finalMath = thermCst + cblCst;
     let endCnt = (amntTherm + teeCnt);
-    console.log(endCnt/5);
+    let endBag = (endCnt/5);
+    console.log(endBag * 25);
     let res = document.getElementById("result").innerHTML="Your heat trace cost is: " + "$" + finalMath;   
 }
 
