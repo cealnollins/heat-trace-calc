@@ -13,7 +13,7 @@ function calc () {
     let cblCst = parseFloat(document.getElementById("cblCst").value) * wasteMath;
     let cblPerTherm = parseFloat(document.getElementById("cblPerTherm").value);
     let amntTherm = wasteMath / cblPerTherm;
-    let endCnt = (amntTherm + teeCnt) / endSealPerBag;
+    let endCnt = (amntTherm + teeCnt) / 5;
     let thermCst = parseFloat(document.getElementById("thermCst").value) * amntTherm;
     let finalMath = thermCst + cblCst;
     console.log(endCnt);
