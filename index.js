@@ -27,7 +27,7 @@ function calc () {
     let tapeCst = tapeNeeded * tapeCstPer
     let strapCst = (amntTherm * 2) * cstPerStrap
     let tBagCst = (teeCnt / 5) * cstPerTBag
-    let lbrCst = (wasteMath / cblPerDay) * lbrPerday
+    let lbrCst = (wasteMath / cblPerDay) * lbrPerDay
     let finalMath = thermCst + cblCst + endCst + tapeCst + strapCst + tBagCst + lbrCst ;
     let res = document.getElementById("result").innerHTML="Your heat trace cost is: " + "$" + finalMath;   
 }
