@@ -6,6 +6,8 @@ function calc () {
     let ninCnt = parseInt(document.getElementById("ninCnt").value);
     let teeCnt = parseInt(document.getElementById("teeCnt").value);
     let vlvCnt = parseInt(document.getElementById("vlvCnt").value);
+    let endSealPerBag = parseInt(document.getElementById("endSealPerBag").value);
+    let cstPerEnd = parseInt(document.getElementById("cstPerEnd").value);
     let fitMth = (ninCnt + teeCnt) * 2 + (vlvCnt * 3 + pipeFt);
     let wasteMath = (fitMth *1.05);
     let cblCst = parseFloat(document.getElementById("cblCst").value) * wasteMath;
@@ -14,8 +16,8 @@ function calc () {
     let thermCst = parseFloat(document.getElementById("thermCst").value) * amntTherm;
     let finalMath = thermCst + cblCst;
     let endCnt = (amntTherm + teeCnt);
-    let endBag = (endCnt/5);
-    console.log(endBag * 25);
+    let endBag = endCnt / endSealPerBag;
+    console.log(endBag * cstPerEnd);
     let res = document.getElementById("result").innerHTML="Your heat trace cost is: " + "$" + finalMath;   
 }
 
