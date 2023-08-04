@@ -15,7 +15,7 @@ function calc () {
     let cblPerDay  = parseInt(document.getElementById("cblPerDay").value);
     let lbrPerDay = parseInt(document.getElementById("lbrPerDay").value);
     let fitMth = (ninCnt + teeCnt) * 2 + (vlvCnt * 3) + pipeFt;
-    let wasteMath = Math.ceil(fitMth *1.05);
+    let wasteMath = fitMth *1.05;
     let cblCst = parseFloat(document.getElementById("cblCst").value) * wasteMath;
     let cblPerTherm = parseFloat(document.getElementById("cblPerTherm").value);
     let amntTherm = Math.ceil(wasteMath / cblPerTherm);
